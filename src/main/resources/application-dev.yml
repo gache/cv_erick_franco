@@ -1,0 +1,30 @@
+name: dev
+environment: developpement
+logging:
+  level:
+    ROOT: INFO
+    org.springframwork.web: INFO
+    org.hibernate: INFO
+    fr.erickfranco: DEBUG
+    org.springframwork.boot.autoconfigure.security: INFO
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/erick_franco
+    username: root
+    password: 9CAci17d08
+    driver-calss-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 6000m
+
+
+
+
